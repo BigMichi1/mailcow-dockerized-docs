@@ -43,7 +43,7 @@ docker-compose exec mysql-mailcow mysql -uroot -p${DBROOT} ${DBNAME}
 ```
 
 ```sql
-CREATE USER 'netdata'@'localhost';
+CREATE USER 'netdata'@'172.22.1.1';
 GRANT USAGE, REPLICATION CLIENT, PROCESS ON *.* TO 'netdata'@'172.22.1.1';
 FLUSH PRIVILEGES;
 ```
